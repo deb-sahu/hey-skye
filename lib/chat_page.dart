@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hey_skye/typing_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   void initState() {
     super.initState();
-    const String apiKey = 'AIzaSyBgBd8IyD4K6MH3zDhEcyRGtZz-BFnrnYA';
+    String apiKey = dotenv.env['GOOGLE_GEMINI_API_KEY'] ?? ''; // Gemini API Key
        _model = GenerativeModel(
       model: 'gemini-1.5-flash',
       apiKey: apiKey,
