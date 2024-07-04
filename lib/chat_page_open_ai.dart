@@ -16,7 +16,7 @@ class _ChatPageState extends State<ChatPage> {
   final List<String> _messages = [];
   final TextEditingController _controller = TextEditingController();
   bool _isTyping = false;
-  static const String apiKey = 'AIzaSyBgBd8IyD4K6MH3zDhEcyRGtZz-BFnrnYA';
+  static const String apiKey = ''; // OpenAI API Key
 
    void _sendMessage() async {
     if (_controller.text.isNotEmpty) {
