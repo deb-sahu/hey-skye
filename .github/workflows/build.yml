@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-          
-      - name: Create API Key Dart File
-        run: echo "const String geminiApiKey = '${{ secrets.GOOGLE_GEMINI_API_KEY }}';" > lib/api_key.dart
         
       - name: View API Key
         run: echo "My secret key is = ${{ vars.GOOGLE_GEMINI_API_KEY }}"
+      
+      - name: Create API Key Dart File
+        run: echo "const String geminiApiKey = '${{ secrets.GOOGLE_GEMINI_API_KEY }}';" > lib/api_key.dart
       
