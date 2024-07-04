@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create .env File
-        run: echo "GIPHY_API_KEY=${{ secrets.GOOGLE_GEMINI_API_KEY }}" > .env
+        run: echo "GOOGLE_GEMINI_API_KEY=${{ secrets.GOOGLE_GEMINI_API_KEY }}" > .env
 
       - name: Display .env File
         run: cat .env
