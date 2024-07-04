@@ -1,17 +1,19 @@
-name: Read repo secrets
+name: Setup Environment File
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  setup-env:
     runs-on: ubuntu-latest
 
     steps:
-        
-      - name: View API Key
-        run: echo "My secret key is = ${{ vars.GOOGLE_GEMINI_API_KEY }}"
-      
-      - name: Create API Key Dart File
-        run: echo "const String geminiApiKey = '${{ secrets.GOOGLE_GEMINI_API_KEY }}';" > /lib/api_key.dart
-      
+      - uses: actions/checkout@v2
+
+      - name: Create .env File
+        run: echo "GIPHY_API_KEY=${{ secrets.GOOGLE_GEMINI_API_KEY }}" > .env
+
+      - name: Display .env File
+        run: cat .env
