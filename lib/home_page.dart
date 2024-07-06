@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: () {
@@ -93,7 +94,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Welcome to Hey Skye!',
+                'Hey there, I\'m Skye',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
