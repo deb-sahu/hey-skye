@@ -30,7 +30,7 @@ Hey Skye is a macOS/Windows-based application that serves as a friendly neighbor
 3. **Add your API key** to the `.env` file:
 
    ```env
-   GIPHY_API_KEY=your-api-key-here
+   GOOGLE_GEMINI_API_KEY=your-api-key-here
    ```
 
 4. **Install the dependencies**:
